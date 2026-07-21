@@ -1,30 +1,33 @@
-let response = await fetch("https://kr.ufc.com/athlete/islam-makhachev");
-let body = await response.text();
+export function getUfcBout(params) {
+  let key = 'hero-profile__division-body">';
 
-let key = 'hero-profile__division-body">';
+  const start = params.indexOf(key) + key.length;
+  const end = params.indexOf("</p>", start);
 
-const start = body.indexOf(key) + key.length;
-const end = body.indexOf("</p>", start);
+  const record = params.slice(start, end);
 
-const record = body.slice(start, end);
+  const nums = record.split(" ")[0].split("-");
 
-const nums = record.split(" ")[0].split("-");
+  key = 'hero-profile__stat-numb">';
+  let idx = -1;
+  let values = [];
 
-console.log(nums[0], nums[1], nums[2]);
+  while (true) {
+    idx = params.indexOf(key, idx + 1);
 
-key = 'hero-profile__stat-numb">';
-let idx = -1;
-let values = [];
+    if (idx === -1) break;
 
-while (true) {
-  idx = body.indexOf(key, idx + 1);
+    const start = idx + key.length;
+    const end = params.indexOf("</p>", start);
 
-  if (idx === -1) break;
-
-  const start = idx + key.length;
-  const end = body.indexOf("</p>", start);
-
-  values.push(body.slice(start, end).trim());
+    values.push(params.slice(start, end).trim());
+  }
+  return {
+    w: nums[0],
+    l: nums[1],
+    d: nums[2],
+    ko: values[0],
+    sub: values[1],
+    finishes: values[2],
+  };
 }
-
-console.log(values);

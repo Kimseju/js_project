@@ -1,15 +1,15 @@
 export function getOneBout(params) {
-  const targetKey = "Finishes";
-  let currentIdx = params.indexOf(targetKey);
+  const key = "Finishes";
+  let currentIdx = params.indexOf(key);
 
   const values = [];
-  const searchStr = '<div class="value">';
+  const str = '<div class="value">';
 
   for (let i = 0; i < 4; i++) {
-    currentIdx = params.indexOf(searchStr, currentIdx);
+    currentIdx = params.indexOf(str, currentIdx);
     if (currentIdx === -1) break;
 
-    const start = currentIdx + searchStr.length;
+    const start = currentIdx + str.length;
     const end = params.indexOf("</div>", start);
 
     values.push(params.slice(start, end).trim());

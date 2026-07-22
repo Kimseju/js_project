@@ -1,19 +1,13 @@
-export function getOneBout(params) {
-  const key = "Finishes";
-  let index = params.indexOf(key);
+export function getOne(params) {
+  let index = params.indexOf("Finishes");
 
   const values = [];
-  const str = '<div class="value">';
 
   for (let i = 0; i < 4; i++) {
-    index = params.indexOf(str, index);
-    if (index === -1) break;
+    index = params.indexOf(`<div class="value">`, index) + 19;
+    let end = params.indexOf("</div>", index);
 
-    const start = index + str.length;
-    const end = params.indexOf("</div>", start);
-
-    values.push(params.slice(start, end).trim());
-    index = end;
+    values.push(params.slice(index, end));
   }
 
   return {

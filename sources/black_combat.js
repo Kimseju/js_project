@@ -1,13 +1,14 @@
 export function getBlackCombat(params) {
-  const key = "data_record_";
-  let idx = -1;
+  let index = 0;
   const values = [];
 
-  while ((idx = params.indexOf(key, idx + 1)) !== -1) {
-    const start = params.indexOf(">", idx) + 1;
-    const end = params.indexOf("<div", start);
+  for (let i = 0; i < 3; i++) {
+    index = params.indexOf("data_record_", index);
+    index = params.indexOf(">", index) + 1;
 
-    values.push(params.slice(start, end).trim());
+    let end = params.indexOf("<div", index);
+
+    values.push(params.slice(index, end).trim());
   }
 
   return {

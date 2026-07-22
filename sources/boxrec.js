@@ -1,16 +1,20 @@
 export function getBoxrec(body) {
-  const key = 'bg-W-500">';
-  const index = body.indexOf(key);
+  let index = 0;
+  let values = [];
 
-  const chunk = body.slice(index, index + 600);
+  for (let i = 0; i < 5; i++) {
+    index = body.indexOf(`w-[33%]`, index);
+    index = body.indexOf(`>`, index) + 1;
+    let end = body.indexOf(`</div>`, index);
 
-  const parts = chunk.split("</div>");
+    values.push(body.slice(index, end));
+  }
 
   return {
-    win: parts[0].replace(key, ""),
-    lose: parts[1].split('bg-L-500">')[1].trim(),
-    draw: parts[2].split('bg-D-500">')[1].trim(),
-    kow: parts[4].split('items-center justify-center">')[1],
-    kol: parts[5].split('items-center justify-center">')[1],
+    win: values[0],
+    lose: values[1],
+    draw: values[2],
+    kow: values[3],
+    kol: values[4],
   };
 }

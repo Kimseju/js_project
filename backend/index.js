@@ -8,7 +8,7 @@ const ig = new IgApiClient();
 const username = process.env.INSTA_USER;
 const password = process.env.INSTA_PASS;
 
-const SESSION_FILE = "./session.json";
+const SESSION_FILE = "./session/session.json";
 
 async function saveSession() {
   const session = await ig.state.serialize();

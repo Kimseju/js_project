@@ -1,6 +1,8 @@
 {
   "type": "module",
   "dependencies": {
-    "igramapi": "^1.48.3"
+    "igramapi": "^1.48.3",
+    "playwright": "^1.61.1",
+    "tough-cookie": "^4.1.4"
   }
 }

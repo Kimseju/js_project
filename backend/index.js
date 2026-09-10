@@ -8,7 +8,7 @@ const ig = new IgApiClient();
 const username = process.env.INSTA_USER;
 const password = process.env.INSTA_PASS;
 
-const SESSION_FILE = "./session/session.json";
+const SESSION_FILE = "../session/session.json";
 
 async function saveSession() {
   const session = await ig.state.serialize();
@@ -96,6 +96,7 @@ export async function main(biography) {
   await saveSession();
 
   console.log("로그인 계정:", me.username);
+  console.log(me);
 
   await ig.account.setBiography(biography);
 

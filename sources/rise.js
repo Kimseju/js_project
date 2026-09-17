@@ -1,4 +1,11 @@
 export function getRize(params) {
+  let imgdx = params.indexOf("p-fighter__picture");
+
+  imgdx = params.indexOf(`src="`, imgdx) + 5;
+  let imgend = params.indexOf(`">`, imgdx);
+
+  let img = params.slice(imgdx, imgend);
+
   let start = params.indexOf("戦歴／") + 3;
 
   let bouts = params.indexOf("戦", start);
@@ -8,6 +15,7 @@ export function getRize(params) {
   let ko = params.indexOf("KO", draw);
 
   return {
+    img: img,
     totalBouts: params.slice(start, bouts),
     win: params.slice(bouts + 1, win),
     lose: params.slice(win + 1, lose),

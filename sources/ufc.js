@@ -1,6 +1,12 @@
 export function getUfc(params) {
   let start = params.indexOf(`hero-profile__division-body">`) + 29;
   let end = params.indexOf(" (W-L-D)", start);
+  let imgdx = params.indexOf("hero-profile__image-wrap");
+
+  imgdx = params.indexOf(`src="`, imgdx) + 5;
+  let imgend = params.indexOf(`" alt=`, imgdx);
+
+  let img = params.slice(imgdx, imgend);
 
   const [w, l, d] = params.slice(start, end).split("-");
 
@@ -13,6 +19,7 @@ export function getUfc(params) {
   }
 
   return {
+    img: img,
     w,
     l,
     d,

@@ -1,6 +1,13 @@
 export function getBlackCombat(params) {
   let index = 0;
+  let imgdx = params.indexOf("fighter_img");
+
   const values = [];
+
+  imgdx = params.indexOf(`src='`, imgdx) + 5;
+  let imgend = params.indexOf(`'`, imgdx);
+
+  let img = params.slice(imgdx, imgend);
 
   for (let i = 0; i < 3; i++) {
     index = params.indexOf("data_record_", index);
@@ -12,6 +19,7 @@ export function getBlackCombat(params) {
   }
 
   return {
+    img: img,
     win: values[0],
     lose: values[1],
     draw: values[2],

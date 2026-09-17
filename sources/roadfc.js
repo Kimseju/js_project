@@ -1,6 +1,12 @@
 export function getRoadfc(params) {
   let index = 0;
+  let imgdx = params.indexOf("fv_wrap");
   let values = [];
+
+  imgdx = params.indexOf(`src='`, imgdx) + 5;
+  let imgend = params.indexOf(`'/>`, imgdx);
+
+  let img = params.slice(imgdx, imgend);
 
   for (let i = 0; i < 3; i++) {
     index = params.indexOf("fs_50", index);
@@ -12,6 +18,7 @@ export function getRoadfc(params) {
   }
 
   return {
+    img: "https://roadfc.co.kr" + img,
     w: values[0],
     l: values[1],
     d: values[2],

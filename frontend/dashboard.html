@@ -15,12 +15,12 @@
   </head>
   <link rel="stylesheet" href="./css/style.css" />
   <body class="m-0 bg-[#131314]">
-    <div class="flex flex-row">
+    <div class="flex flex-row relative w-full min-h-screen">
       <div
-        class="flex flex-col w-[288px] h-screen items-start bg-[#0E0E0F] text-[#FFF8F7] box-border max-md:w-full max-md:h-[80px] max-md:fixed max-md:top-0 max-md:left-0 max-md:z-50"
+        class="sticky top-0 flex flex-col w-[288px] h-screen items-start bg-[#0E0E0F] text-[#FFF8F7] box-border max-md:w-full max-md:h-20 max-md:fixed max-md:top-0 max-md:left-0 max-md:z-50"
       >
         <div
-          class="flex h-[104px] pb-6 flex-row items-center shrink-0 self-stretch gap-2 px-6 max-md:h-[80px] max-md:pb-0"
+          class="flex h-26 pb-6 flex-row items-center shrink-0 self-stretch gap-2 px-6 max-md:h-20 max-md:pb-0"
         >
           <svg
             width="32"
@@ -58,10 +58,24 @@
           >
             BOXSHOT
           </a>
+
+          <div
+            class="fixed top-5 right-5 z-10 flex flex-row items-center gap-4"
+          >
+            <div class="flex flex-col items-end font-mono font-medium">
+              <h5 class="text-[#E5E2E3] text-sm tracking-[0.7px]">김복서</h5>
+              <h5 class="text-[#E7BDB7] text-xs">KIM BOK-SEO</h5>
+            </div>
+
+            <a
+              href="./profile.html"
+              class="h-10 w-10 border-2 border-[#FFB4AA] rounded-full"
+            ></a>
+          </div>
         </div>
 
         <ul
-          class="flex w-full px-4 flex-col items-stretch gap-2 max-md:fixed max-md:bottom-0 max-md:left-0 max-md:z-50 max-md:h-[76px] max-md:px-3 max-md:flex-row max-md:items-center max-md:justify-between max-md:gap-2 max-md:bg-[#0E0E0F] max-md:border-t max-md:border-[#242426]"
+          class="flex w-full px-4 flex-col items-stretch gap-2 max-md:fixed max-md:bottom-0 max-md:left-0 max-md:z-50 max-md:h-19 max-md:px-3 max-md:flex-row max-md:items-center max-md:justify-between max-md:gap-2 max-md:bg-[#0E0E0F] max-md:border-t max-md:border-[#242426]"
         >
           <li class="w-full list-none max-md:flex-1">
             <div
@@ -142,47 +156,41 @@
           </li>
         </ul>
       </div>
-      <div class="flex flex-col flex-1 px-12 gap-6">
-        <div class="flex flex-row gap-4 justify-end mt-5">
-          <div class="flex flex-col font-mono items-end font-medium">
-            <h5 class="text-[#E5E2E3] text-sm tracking-[0.7px]">김복서</h5>
-            <h5 class="text-[#E7BDB7] text-xs">KIM BOK-SEO</h5>
-          </div>
-          <div
-            class="h-[40px] w-[40px] border-2 border-[#FFB4AA] rounded-full"
-          ></div>
-        </div>
-        <div class="relative w-full justify-items-end">
-          <img
-            src="https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VAN_JOSHUA_L_BELT_05-09.png?itok=emXQEdHo"
-            alt=""
-            class="w-[280px] absolute z-0 mr-5 slideup"
-          />
-        </div>
+      <div
+        class="flex flex-col flex-1 min-w-0 relative z-10 px-12 max-md:px-4 mr-80 max-md:w-full max-md:mr-0 pb-10 gap-6 max-md:mb-12"
+      >
+        <!-- mt-[33.15vh] -->
         <h1
-          class="text-[#E5E2E3] slideup font-['Anton'] text-5xl not-italic font-normal mt-52 relative z-10"
+          class="text-[#E5E2E3] mt-[30.15vh] slideup font-['Anton'] text-5xl max-md:text-3xl not-italic font-normal"
         >
           김복서 (KIM BOK-SEO)
+          <!-- KIM BOK-SEO -->
         </h1>
-        <div class="flex flex-row slideup gap-6 justify-center relative z-10">
+        <div
+          class="grid grid-cols-3 slideup gap-5 max-md:gap-3 max-md:grid-cols-2"
+        >
           <div
-            class="rounded-[12px] bg-[#2A2A2B] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)] flex p-6 flex-col justify-center items-center gap-2 flex-1"
+            class="rounded-xl font-mono bg-[#2A2A2B] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)] flex p-5 max-md:p-4 flex-col justify-center items-center max-md:items-start gap-1.5 max-md:col-span-2"
           >
-            <h5 class="text-[#E7BDB7] font-mono text-xs font-normal">WINS</h5>
-            <h2
-              class="count text-[#E5E2E3] font-['Anton'] text-6xl font-normal not-italic"
-              data-target="15"
+            <h5 class="text-[#FFFFFF] font-medium text-xs">WINS</h5>
+            <div
+              class="flex flex-col items-center max-md:flex-row max-md:items-end max-md:gap-2"
             >
-              0
-            </h2>
-            <h5 class="text-[#FFB4AA] font-mono text-xs font-normal">8 KOs</h5>
+              <h2
+                class="count text-[#FFFFFF] font-['Anton'] text-6xl font-normal not-italic"
+                data-target="15"
+              >
+                0
+              </h2>
+              <h5 class="text-[#FFFFFF] font-medium text-xs">8 KOs</h5>
+            </div>
           </div>
           <div
-            class="rounded-[12px] bg-[#2A2A2B] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)] flex p-6 flex-col justify-center items-center gap-2 flex-1"
+            class="rounded-xl font-mono bg-[#2A2A2B] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)] flex p-5 max-md:p-4 flex-col justify-center items-center max-md:items-start gap-1.5"
           >
-            <h5 class="text-[#E7BDB7] font-mono text-xs font-normal">LOSSES</h5>
+            <h5 class="text-[#FFFFFF] font-medium text-xs">LOSSES</h5>
             <h2
-              class="count text-[#E5E2E3] font-['Anton'] text-6xl font-normal not-italic"
+              class="count text-[#E5E2E3] font-['Anton'] text-6xl max-md:text-3xl font-normal not-italic"
               data-target="2"
             >
               0
@@ -190,11 +198,11 @@
             <div class="h-full"></div>
           </div>
           <div
-            class="rounded-[12px] bg-[#2A2A2B] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)] flex p-6 flex-col justify-center items-center gap-2 flex-1"
+            class="rounded-xl font-mono bg-[#2A2A2B] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)] flex p-5 max-md:p-4 flex-col justify-center items-center max-md:items-start gap-1.5"
           >
-            <h5 class="text-[#E7BDB7] font-mono text-xs font-normal">DRAWS</h5>
+            <h5 class="text-[#FFFFFF] font-medium text-xs">DRAWS</h5>
             <h2
-              class="count text-[#E5E2E3] font-['Anton'] text-6xl font-normal not-italic"
+              class="count text-[#E5E2E3] font-['Anton'] text-6xl max-md:text-3xl font-normal not-italic"
               data-target="0"
             >
               0
@@ -202,13 +210,13 @@
             <div class="h-full"></div>
           </div>
         </div>
-        <div class="flex flex-row slideup rounded-[12px] overflow-hidden">
+        <div class="flex flex-row slideup rounded-xl overflow-hidden">
           <svg
             width="197"
             height="235"
             viewBox="0 0 197 235"
             fill="none"
-            class="shrink-0"
+            class="shrink-0 max-md:hidden"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
           >
@@ -235,11 +243,9 @@
             </defs>
           </svg>
           <div
-            class="flex flex-col gap-2 p-12 bg-gradient-to-r from-[#1F1F20] to-[#353436] w-full"
+            class="flex flex-col gap-2 px-12 py-12 max-md:items-center max-md:py-5 bg-linear-to-r from-[#1F1F20] to-[#353436] w-full"
           >
-            <h5
-              class="text-[#FFB4AA] font-mono text-xs font-normal font-medium"
-            >
+            <h5 class="text-[#FFB4AA] font-mono text-xs font-medium">
               UPCOMING MATCH
             </h5>
             <span
@@ -252,7 +258,7 @@
               </h1>
             </span>
             <div
-              class="flex flex-row items-center gap-4 text-[#E7BDB7] text-2xl font-['Anton'] mt-4"
+              class="flex flex-row items-center max-md:items-start gap-[1.14vw] max-md:gap-[3vw] text-[#E7BDB7] text-2xl font-['Anton'] mt-4"
             >
               <div class="flex flex-col items-center">
                 <span class="text-[#E5E2E3]">12</span>
@@ -277,6 +283,10 @@
           </div>
         </div>
       </div>
+      <img
+        src="https://kr.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VAN_JOSHUA_L_BELT_05-09.png?itok=emXQEdHo"
+        class="w-110 max-md:w-37.5 absolute z-0 max-md:top-23 bottom-0 right-5 slideup"
+      />
     </div>
     <script>
       const numbers = document.querySelectorAll(".count");

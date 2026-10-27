@@ -12,6 +12,7 @@
             href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body class="m-0 bg-[#131314]">
         <div class="flex flex-row">
@@ -60,7 +61,7 @@
 
                     <a
                         href="./dashboard.html"
-                        class="text-[#E5E2E3] font-['Anton'] text-2xl uppercase tracking-tighter"
+                        class="text-[#E5E2E3] font-['Anton'] text-xl uppercase tracking-tighter"
                     >
                         BOXSHOT
                     </a>
@@ -149,20 +150,20 @@
                 </ul>
             </div>
             <div
-                class="flex flex-col items-start gap-6 self-stretch w-screen pt-12 pl-12 pr-12 pb-24"
+                class="slideup flex flex-col items-start gap-6 self-stretch w-screen pt-12 pl-12 pr-12 pb-24 max-md:pt-[104px]"
             >
                 <div
-                    class="flex max-w p-12 justify-between items-center self-stretch rounded-2xl border-1 border-solid border-[#5d3f3c]/20 bg-[#1f1f20] shadow-xl"
+                    class="flex max-w p-12 justify-between items-center self-stretch rounded-2xl border-1 border-solid border-[#5d3f3c]/20 bg-[#1f1f20] shadow-xl max-md:hidden"
                 >
                     <div class="flex flex-col max-w-2xl items-start gap-3">
-                        <div class="flex pr-88 items-center gap-4 self-stretch">
+                        <div class="flex items-center gap-4 self-stretch">
                             <div class="bg-[#ffb4aa] w-2 h-8"></div>
                             <p class="text-[#e5e2e3] font-[Anton] text-[32px]">
                                 LINK YOUR LEGACY
                             </p>
                         </div>
                         <p
-                            class="text-[#e7bdb7] font-[Hanken_Grotesk] text-[18px] font-normal leading-[28.8px]"
+                            class="text-[#e7bdb7] font-[Hanken_Grotesk] text-[18px] font-normal leading-[160%]"
                         >
                             Select your primary organization to synchronize your
                             fight record, stats, <br />
@@ -191,7 +192,7 @@
                     </div>
                 </div>
                 <div
-                    class="flex pt-6 justify-between items-center self-stretch"
+                    class="flex pt-6 justify-between items-center self-stretch max-md:hidden"
                 >
                     <div class="flex items-center gap-2">
                         <svg
@@ -207,14 +208,14 @@
                             />
                         </svg>
                         <p
-                            class="text-[#E7BDB7] font-['JetBrains Mono'] text-[14px] font-normal"
+                            class="text-[#E7BDB7] font-['JetBrains Mono'] text-sm font-normal"
                         >
                             SUPPORTED FEDERATIONS
                         </p>
                     </div>
                     <div class="flex flex-col flex-start">
                         <div
-                            class="flex items-center w-96 border-b-2 border-solid border-[#5d3f3c] bg-[#2A2A2B] pt-[11px] pb-[11.8px] px-4 gap-2"
+                            class="flex items-center w-64 border-b-2 border-solid border-[#5d3f3c] bg-[#2A2A2B] pt-[11px] pb-[11.8px] px-4 gap-2"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -240,20 +241,21 @@
                         </div>
                     </div>
                 </div>
+                <!--여기다가 모바일 검색넣기-->
                 <div
-                    class="inline-grid gap-x-6 gap-y-6 self-stretch grid-cols-3 gap-6 w-full"
+                    class="inline-grid gap-x-6 gap-y-6 self-stretch grid-cols-3 max-md:grid-cols-2 gap-6 w-full"
                 >
                     <div
-                        class="h-100 area-[1/1/2/2] self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                        class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
                     >
                         <div
-                            class="rounded-xl bg-[#00000000] shadow-md m-[26px]"
+                            class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
                         >
                             <div
-                                class="flex w-[100px] h-[140px] pb-6 flex-col items-start"
+                                class="flex w-16 h-22 pb-6 flex-col items-start max-md:mx-auto"
                             >
                                 <div
-                                    class="flex w-[100px] h-[100px] justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff]"
+                                    class="flex w-16 h-16 justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff]"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -285,23 +287,26 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="flex pb-3 flex-col items-start">
+
+                            <div class="flex pb-0 flex-col items-start">
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="flex text-[#E5E2E3] font-['Anton'] text-4xl font-normal leading-[28.8px] uppercase"
+                                        class="flex text-[#E5E2E3] font-['Anton'] text-2xl font-normal leading-[28.8px] uppercase max-md:text-lg max-md:self-center max-md:text-center"
                                     >
                                         UFC
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex pb-6 flex-col items-start">
+                            <div
+                                class="flex pt-3 pb-6 flex-col items-start max-md:hidden"
+                            >
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-lg font-normal leading-[24px]"
+                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-base font-normal leading-[24px]"
                                     >
                                         Ultimate Fighting Championship.
                                         <br />Global MMA premier organization.
@@ -309,7 +314,7 @@
                                 </div>
                             </div>
                             <div
-                                class="flex py-6 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3]"
+                                class="flex mt-auto py-3 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3] max-md:hidden"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -317,7 +322,7 @@
                                     height="10"
                                     viewBox="0 0 10 10"
                                     fill="none"
-                                    class="fill-[#E5E2E3] w-4 h-4"
+                                    class="fill-[#E5E2E3] w-[10px] h-[10px]"
                                 >
                                     <path
                                         d="M0 9.33333V8.16667H1.60417L1.37083 7.9625C0.865278 7.51528 0.510417 7.00486 0.30625 6.43125C0.102083 5.85764 0 5.27917 0 4.69583C0 3.61667 0.323264 2.6566 0.969792 1.81562C1.61632 0.974653 2.45972 0.418056 3.5 0.145833V1.37083C2.8 1.62361 2.23611 2.05382 1.80833 2.66146C1.38056 3.2691 1.16667 3.94722 1.16667 4.69583C1.16667 5.13333 1.24931 5.55868 1.41458 5.97188C1.57986 6.38507 1.8375 6.76667 2.1875 7.11667L2.33333 7.2625V5.83333H3.5V9.33333H0ZM5.83333 9.1875V7.9625C6.53333 7.70972 7.09722 7.27951 7.525 6.67188C7.95278 6.06424 8.16667 5.38611 8.16667 4.6375C8.16667 4.2 8.08403 3.77465 7.91875 3.36146C7.75347 2.94826 7.49583 2.56667 7.14583 2.21667L7 2.07083V3.5H5.83333V0H9.33333V1.16667H7.72917L7.9625 1.37083C8.43889 1.84722 8.78646 2.36493 9.00521 2.92396C9.22396 3.48299 9.33333 4.05417 9.33333 4.6375C9.33333 5.71667 9.01007 6.67674 8.36354 7.51771C7.71701 8.35868 6.87361 8.91528 5.83333 9.1875Z"
@@ -325,7 +330,7 @@
                                     />
                                 </svg>
                                 <p
-                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-xl font-medium leading-[16.8px] tracking-tight uppercase"
+                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-sm font-medium leading-[16.8px] tracking-tight uppercase"
                                 >
                                     CONNECT
                                 </p>
@@ -333,48 +338,49 @@
                         </div>
                     </div>
                     <div
-                        class="h-100 area-[1/1/2/2] self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                        class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
                     >
                         <div
-                            class="rounded-xl bg-[#00000000] shadow-md m-[26px]"
+                            class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
                         >
                             <div
-                                class="flex w-[100px] h-[140px] pb-6 flex-col items-start"
+                                class="flex w-16 h-22 pb-6 flex-col items-start max-md:mx-auto"
                             >
                                 <div
-                                    class="flex w-[100px] h-[100px] justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
+                                    class="flex w-16 h-16 justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
                                 >
                                     <img
                                         src="https://i.ibb.co/tpc14SVq/image.png"
                                     />
                                 </div>
                             </div>
-                            <div class="flex pb-3 flex-col items-start">
+                            <div class="flex pb-0 flex-col items-start">
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="flex text-[#E5E2E3] font-['Anton'] text-4xl font-normal leading-[28.8px] uppercase"
+                                        class="flex text-[#E5E2E3] font-['Anton'] text-2xl font-normal leading-[28.8px] uppercase max-md:text-lg max-md:self-center max-md:text-center"
                                     >
                                         one Championship
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex pb-6 flex-col items-start">
+                            <div
+                                class="flex pt-3 pb-6 flex-col items-start max-md:hidden"
+                            >
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-lg font-normal leading-[24px]"
+                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-base font-normal leading-[24px]"
                                     >
                                         Asia's largest global sports media
-                                        property. <br />MMA, Muay Thai,
-                                        Kickboxing.
+                                        property. MMA, Muay Thai, Kickboxing.
                                     </p>
                                 </div>
                             </div>
                             <div
-                                class="flex py-6 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3]"
+                                class="flex mt-auto py-3 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3] max-md:hidden"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -382,7 +388,7 @@
                                     height="10"
                                     viewBox="0 0 10 10"
                                     fill="none"
-                                    class="fill-[#E5E2E3] w-4 h-4"
+                                    class="fill-[#E5E2E3] w-[10px] h-[10px]"
                                 >
                                     <path
                                         d="M0 9.33333V8.16667H1.60417L1.37083 7.9625C0.865278 7.51528 0.510417 7.00486 0.30625 6.43125C0.102083 5.85764 0 5.27917 0 4.69583C0 3.61667 0.323264 2.6566 0.969792 1.81562C1.61632 0.974653 2.45972 0.418056 3.5 0.145833V1.37083C2.8 1.62361 2.23611 2.05382 1.80833 2.66146C1.38056 3.2691 1.16667 3.94722 1.16667 4.69583C1.16667 5.13333 1.24931 5.55868 1.41458 5.97188C1.57986 6.38507 1.8375 6.76667 2.1875 7.11667L2.33333 7.2625V5.83333H3.5V9.33333H0ZM5.83333 9.1875V7.9625C6.53333 7.70972 7.09722 7.27951 7.525 6.67188C7.95278 6.06424 8.16667 5.38611 8.16667 4.6375C8.16667 4.2 8.08403 3.77465 7.91875 3.36146C7.75347 2.94826 7.49583 2.56667 7.14583 2.21667L7 2.07083V3.5H5.83333V0H9.33333V1.16667H7.72917L7.9625 1.37083C8.43889 1.84722 8.78646 2.36493 9.00521 2.92396C9.22396 3.48299 9.33333 4.05417 9.33333 4.6375C9.33333 5.71667 9.01007 6.67674 8.36354 7.51771C7.71701 8.35868 6.87361 8.91528 5.83333 9.1875Z"
@@ -390,7 +396,7 @@
                                     />
                                 </svg>
                                 <p
-                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-xl font-medium leading-[16.8px] tracking-tight uppercase"
+                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-sm font-medium leading-[16.8px] tracking-tight uppercase"
                                 >
                                     CONNECT
                                 </p>
@@ -398,39 +404,41 @@
                         </div>
                     </div>
                     <div
-                        class="h-100 area-[1/1/2/2] self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                        class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
                     >
                         <div
-                            class="rounded-xl bg-[#00000000] shadow-md m-[26px]"
+                            class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
                         >
                             <div
-                                class="flex w-[100px] h-[140px] pb-6 flex-col items-start"
+                                class="flex w-16 h-22 pb-6 flex-col items-start max-md:mx-auto"
                             >
                                 <div
-                                    class="flex w-[100px] h-[100px] justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
+                                    class="flex w-16 h-16 justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
                                 >
                                     <img
                                         src="https://i.ibb.co/HDp1tG9r/image.png"
                                     />
                                 </div>
                             </div>
-                            <div class="flex pb-3 flex-col items-start">
+                            <div class="flex pb-0 flex-col items-start">
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="flex text-[#E5E2E3] font-['Anton'] text-4xl font-normal leading-[28.8px] uppercase"
+                                        class="flex text-[#E5E2E3] font-['Anton'] text-2xl font-normal leading-[28.8px] uppercase max-md:text-lg max-md:self-center max-md:text-center"
                                     >
                                         boxrec
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex pb-6 flex-col items-start">
+                            <div
+                                class="flex pt-3 pb-6 flex-col items-start max-md:hidden"
+                            >
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-lg font-normal leading-[24px]"
+                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-base font-normal leading-[24px]"
                                     >
                                         The official record keeper for <br />
                                         professional boxing globally.
@@ -438,7 +446,7 @@
                                 </div>
                             </div>
                             <div
-                                class="flex py-6 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3]"
+                                class="flex mt-auto py-3 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3] max-md:hidden"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -446,7 +454,7 @@
                                     height="10"
                                     viewBox="0 0 10 10"
                                     fill="none"
-                                    class="fill-[#E5E2E3] w-4 h-4"
+                                    class="fill-[#E5E2E3] w-[10px] h-[10px]"
                                 >
                                     <path
                                         d="M0 9.33333V8.16667H1.60417L1.37083 7.9625C0.865278 7.51528 0.510417 7.00486 0.30625 6.43125C0.102083 5.85764 0 5.27917 0 4.69583C0 3.61667 0.323264 2.6566 0.969792 1.81562C1.61632 0.974653 2.45972 0.418056 3.5 0.145833V1.37083C2.8 1.62361 2.23611 2.05382 1.80833 2.66146C1.38056 3.2691 1.16667 3.94722 1.16667 4.69583C1.16667 5.13333 1.24931 5.55868 1.41458 5.97188C1.57986 6.38507 1.8375 6.76667 2.1875 7.11667L2.33333 7.2625V5.83333H3.5V9.33333H0ZM5.83333 9.1875V7.9625C6.53333 7.70972 7.09722 7.27951 7.525 6.67188C7.95278 6.06424 8.16667 5.38611 8.16667 4.6375C8.16667 4.2 8.08403 3.77465 7.91875 3.36146C7.75347 2.94826 7.49583 2.56667 7.14583 2.21667L7 2.07083V3.5H5.83333V0H9.33333V1.16667H7.72917L7.9625 1.37083C8.43889 1.84722 8.78646 2.36493 9.00521 2.92396C9.22396 3.48299 9.33333 4.05417 9.33333 4.6375C9.33333 5.71667 9.01007 6.67674 8.36354 7.51771C7.71701 8.35868 6.87361 8.91528 5.83333 9.1875Z"
@@ -454,7 +462,7 @@
                                     />
                                 </svg>
                                 <p
-                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-xl font-medium leading-[16.8px] tracking-tight uppercase"
+                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-sm font-medium leading-[16.8px] tracking-tight uppercase"
                                 >
                                     CONNECT
                                 </p>
@@ -462,39 +470,41 @@
                         </div>
                     </div>
                     <div
-                        class="h-100 area-[1/1/2/2] self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                        class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
                     >
                         <div
-                            class="rounded-xl bg-[#00000000] shadow-md m-[26px]"
+                            class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
                         >
                             <div
-                                class="flex w-[100px] h-[140px] pb-6 flex-col items-start"
+                                class="flex w-16 h-22 pb-6 flex-col items-start max-md:mx-auto"
                             >
                                 <div
-                                    class="flex w-[100px] h-[100px] justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
+                                    class="flex w-16 h-16 justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
                                 >
                                     <img
                                         src="https://i.ibb.co/0Rff0CBG/image.png"
                                     />
                                 </div>
                             </div>
-                            <div class="flex pb-3 flex-col items-start">
+                            <div class="flex pb-0 flex-col items-start">
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="flex text-[#E5E2E3] font-['Anton'] text-4xl font-normal leading-[28.8px] uppercase"
+                                        class="flex text-[#E5E2E3] font-['Anton'] text-2xl font-normal leading-[28.8px] uppercase max-md:text-lg max-md:self-center max-md:text-center"
                                     >
                                         black combat
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex pb-6 flex-col items-start">
+                            <div
+                                class="flex pt-3 pb-6 flex-col items-start max-md:hidden"
+                            >
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-lg font-normal leading-[24px]"
+                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-base font-normal leading-[24px]"
                                     >
                                         Rapidly growing South Korean Mixed
                                         <br />
@@ -503,7 +513,7 @@
                                 </div>
                             </div>
                             <div
-                                class="flex py-6 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3]"
+                                class="flex mt-auto py-3 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3] max-md:hidden"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -511,7 +521,7 @@
                                     height="10"
                                     viewBox="0 0 10 10"
                                     fill="none"
-                                    class="fill-[#E5E2E3] w-4 h-4"
+                                    class="fill-[#E5E2E3] w-[10px] h-[10px]"
                                 >
                                     <path
                                         d="M0 9.33333V8.16667H1.60417L1.37083 7.9625C0.865278 7.51528 0.510417 7.00486 0.30625 6.43125C0.102083 5.85764 0 5.27917 0 4.69583C0 3.61667 0.323264 2.6566 0.969792 1.81562C1.61632 0.974653 2.45972 0.418056 3.5 0.145833V1.37083C2.8 1.62361 2.23611 2.05382 1.80833 2.66146C1.38056 3.2691 1.16667 3.94722 1.16667 4.69583C1.16667 5.13333 1.24931 5.55868 1.41458 5.97188C1.57986 6.38507 1.8375 6.76667 2.1875 7.11667L2.33333 7.2625V5.83333H3.5V9.33333H0ZM5.83333 9.1875V7.9625C6.53333 7.70972 7.09722 7.27951 7.525 6.67188C7.95278 6.06424 8.16667 5.38611 8.16667 4.6375C8.16667 4.2 8.08403 3.77465 7.91875 3.36146C7.75347 2.94826 7.49583 2.56667 7.14583 2.21667L7 2.07083V3.5H5.83333V0H9.33333V1.16667H7.72917L7.9625 1.37083C8.43889 1.84722 8.78646 2.36493 9.00521 2.92396C9.22396 3.48299 9.33333 4.05417 9.33333 4.6375C9.33333 5.71667 9.01007 6.67674 8.36354 7.51771C7.71701 8.35868 6.87361 8.91528 5.83333 9.1875Z"
@@ -519,7 +529,7 @@
                                     />
                                 </svg>
                                 <p
-                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-xl font-medium leading-[16.8px] tracking-tight uppercase"
+                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-sm font-medium leading-[16.8px] tracking-tight uppercase"
                                 >
                                     CONNECT
                                 </p>
@@ -527,39 +537,41 @@
                         </div>
                     </div>
                     <div
-                        class="h-100 area-[1/1/2/2] self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                        class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
                     >
                         <div
-                            class="rounded-xl bg-[#00000000] shadow-md m-[26px]"
+                            class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
                         >
                             <div
-                                class="flex w-[100px] h-[140px] pb-6 flex-col items-start"
+                                class="flex w-16 h-22 pb-6 flex-col items-start max-md:mx-auto"
                             >
                                 <div
-                                    class="flex w-[100px] h-[100px] justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
+                                    class="flex w-16 h-16 justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
                                 >
                                     <img
                                         src="https://i.ibb.co/TDsBLPyC/image.jpg"
                                     />
                                 </div>
                             </div>
-                            <div class="flex pb-3 flex-col items-start">
+                            <div class="flex pb-0 flex-col items-start">
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="flex text-[#E5E2E3] font-['Anton'] text-4xl font-normal leading-[28.8px] uppercase"
+                                        class="flex text-[#E5E2E3] font-['Anton'] text-2xl font-normal leading-[28.8px] uppercase max-md:text-lg max-md:self-center max-md:text-center"
                                     >
                                         rise
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex pb-6 flex-col items-start">
+                            <div
+                                class="flex pt-3 pb-6 flex-col items-start max-md:hidden"
+                            >
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-lg font-normal leading-[24px]"
+                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-base font-normal leading-[24px]"
                                     >
                                         Premier Japanese Kickboxing <br />
                                         organization.
@@ -567,7 +579,7 @@
                                 </div>
                             </div>
                             <div
-                                class="flex py-6 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3]"
+                                class="flex mt-auto py-3 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3] max-md:hidden"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -575,7 +587,7 @@
                                     height="10"
                                     viewBox="0 0 10 10"
                                     fill="none"
-                                    class="fill-[#E5E2E3] w-4 h-4"
+                                    class="fill-[#E5E2E3] w-[10px] h-[10px]"
                                 >
                                     <path
                                         d="M0 9.33333V8.16667H1.60417L1.37083 7.9625C0.865278 7.51528 0.510417 7.00486 0.30625 6.43125C0.102083 5.85764 0 5.27917 0 4.69583C0 3.61667 0.323264 2.6566 0.969792 1.81562C1.61632 0.974653 2.45972 0.418056 3.5 0.145833V1.37083C2.8 1.62361 2.23611 2.05382 1.80833 2.66146C1.38056 3.2691 1.16667 3.94722 1.16667 4.69583C1.16667 5.13333 1.24931 5.55868 1.41458 5.97188C1.57986 6.38507 1.8375 6.76667 2.1875 7.11667L2.33333 7.2625V5.83333H3.5V9.33333H0ZM5.83333 9.1875V7.9625C6.53333 7.70972 7.09722 7.27951 7.525 6.67188C7.95278 6.06424 8.16667 5.38611 8.16667 4.6375C8.16667 4.2 8.08403 3.77465 7.91875 3.36146C7.75347 2.94826 7.49583 2.56667 7.14583 2.21667L7 2.07083V3.5H5.83333V0H9.33333V1.16667H7.72917L7.9625 1.37083C8.43889 1.84722 8.78646 2.36493 9.00521 2.92396C9.22396 3.48299 9.33333 4.05417 9.33333 4.6375C9.33333 5.71667 9.01007 6.67674 8.36354 7.51771C7.71701 8.35868 6.87361 8.91528 5.83333 9.1875Z"
@@ -583,7 +595,7 @@
                                     />
                                 </svg>
                                 <p
-                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-xl font-medium leading-[16.8px] tracking-tight uppercase"
+                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-sm font-medium leading-[16.8px] tracking-tight uppercase"
                                 >
                                     CONNECT
                                 </p>
@@ -591,39 +603,41 @@
                         </div>
                     </div>
                     <div
-                        class="h-100 area-[1/1/2/2] self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                        class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
                     >
                         <div
-                            class="rounded-xl bg-[#00000000] shadow-md m-[26px]"
+                            class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
                         >
                             <div
-                                class="flex w-[100px] h-[140px] pb-6 flex-col items-start"
+                                class="flex w-16 h-22 pb-6 flex-col items-start max-md:mx-auto"
                             >
                                 <div
-                                    class="flex w-[100px] h-[100px] justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
+                                    class="flex w-16 h-16 justify-center items-center shrink-0 rounded-lg border-1 border-solid border-[#5d3f3c]/30 bg-[#ffffff] overflow-hidden"
                                 >
                                     <img
                                         src="https://i.ibb.co/C34PwDtn/image.webp"
                                     />
                                 </div>
                             </div>
-                            <div class="flex pb-3 flex-col items-start">
+                            <div class="flex pb-0 flex-col items-start">
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="flex text-[#E5E2E3] font-['Anton'] text-4xl font-normal leading-[28.8px] uppercase"
+                                        class="flex text-[#E5E2E3] font-['Anton'] text-2xl font-normal leading-[28.8px] uppercase max-md:text-lg max-md:self-center max-md:text-center"
                                     >
                                         road fc
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex pb-6 flex-col items-start">
+                            <div
+                                class="flex pt-3 pb-6 flex-col items-start max-md:hidden"
+                            >
                                 <div
                                     class="flex flex-col items-start self-stretch"
                                 >
                                     <p
-                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-lg font-normal leading-[24px]"
+                                        class="self-stretch text-[#E7BDB7] font-['Hanken_Grotesk'] text-base font-normal leading-[24px]"
                                     >
                                         Major South Korean Mixed <br />
                                         Martial Arts promotion.
@@ -631,7 +645,7 @@
                                 </div>
                             </div>
                             <div
-                                class="flex py-6 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3]"
+                                class="flex mt-auto py-3 justify-center items-center gap-2 border-1 border-solid border-[#E5E2E3] max-md:hidden"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -639,7 +653,7 @@
                                     height="10"
                                     viewBox="0 0 10 10"
                                     fill="none"
-                                    class="fill-[#E5E2E3] w-4 h-4"
+                                    class="fill-[#E5E2E3] w-[10px] h-[10px]"
                                 >
                                     <path
                                         d="M0 9.33333V8.16667H1.60417L1.37083 7.9625C0.865278 7.51528 0.510417 7.00486 0.30625 6.43125C0.102083 5.85764 0 5.27917 0 4.69583C0 3.61667 0.323264 2.6566 0.969792 1.81562C1.61632 0.974653 2.45972 0.418056 3.5 0.145833V1.37083C2.8 1.62361 2.23611 2.05382 1.80833 2.66146C1.38056 3.2691 1.16667 3.94722 1.16667 4.69583C1.16667 5.13333 1.24931 5.55868 1.41458 5.97188C1.57986 6.38507 1.8375 6.76667 2.1875 7.11667L2.33333 7.2625V5.83333H3.5V9.33333H0ZM5.83333 9.1875V7.9625C6.53333 7.70972 7.09722 7.27951 7.525 6.67188C7.95278 6.06424 8.16667 5.38611 8.16667 4.6375C8.16667 4.2 8.08403 3.77465 7.91875 3.36146C7.75347 2.94826 7.49583 2.56667 7.14583 2.21667L7 2.07083V3.5H5.83333V0H9.33333V1.16667H7.72917L7.9625 1.37083C8.43889 1.84722 8.78646 2.36493 9.00521 2.92396C9.22396 3.48299 9.33333 4.05417 9.33333 4.6375C9.33333 5.71667 9.01007 6.67674 8.36354 7.51771C7.71701 8.35868 6.87361 8.91528 5.83333 9.1875Z"
@@ -647,7 +661,7 @@
                                     />
                                 </svg>
                                 <p
-                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-xl font-medium leading-[16.8px] tracking-tight uppercase"
+                                    class="text-[#E5E2E3] text-center font-['JetBrains_Mono'] text-sm font-medium leading-[16.8px] tracking-tight uppercase"
                                 >
                                     CONNECT
                                 </p>
@@ -655,16 +669,18 @@
                         </div>
                     </div>
                     <div
-                        class="area-[1/1/2/2] flex min-h-[280px] py-[62.6px] px-6 flex-col justify-center items-center self-stretch rounded-xl border-1 border-dashed border-[#E5E2E3] bg-[#131314]"
+                        class="area-[1/1/2/2] flex py-[62.6px] px-6 flex-col justify-center items-center self-stretch rounded-xl border-1 border-dashed border-[#E5E2E3] bg-[#131314]"
                     >
-                        <div class="flex w-32 h-40 pb-4 flex-col items-start">
+                        <div
+                            class="flex w-16 h-20 pb-4 flex-col items-start max-md:pb-0"
+                        >
                             <div
-                                class="flex w-32 h-32 justify-center items-center shrink-0 rounded-full bg-[#2A2A2B]"
+                                class="flex w-16 h-16 justify-center items-center shrink-0 rounded-full bg-[#2A2A2B]"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="36"
-                                    height="36"
+                                    width="16"
+                                    height="16"
                                     viewBox="0 0 18 18"
                                     fill="none"
                                 >
@@ -676,12 +692,12 @@
                             </div>
                         </div>
                         <p
-                            class="text-[#e5e2e3] text-center font-['JetBrains_Mono'] text-2xl font-semibold leading-[16.8px] tracking-tight uppercase pb-2"
+                            class="text-[#e5e2e3] text-center font-['JetBrains_Mono'] text-sm font-semibold leading-[16.8px] tracking-tight uppercase pb-2 max-md:hidden"
                         >
                             CAN'T FIND YOUR ORG?
                         </p>
                         <p
-                            class="text-[#e7bdb7] text-center font-['Hanken_Grotesk'] text-xl font-normal leading-[24px]"
+                            class="text-[#e7bdb7] text-center font-['Hanken_Grotesk'] text-base font-normal leading-[24px] max-md:hidden"
                         >
                             Manually input your record or <br />
                             request a new integration.

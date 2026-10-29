@@ -192,6 +192,29 @@
                     </div>
                 </div>
                 <div
+                    class="relative flex flex-col items-start self-stretch md:hidden"
+                >
+                    <p
+                        class="self-stretch text-[#FFB4AA] font-['Anton'] text-[32px] font-normal leading-[40px] tracking-[0.8px] uppercase"
+                    >
+                        SELECT
+                    </p>
+                    <p
+                        class="self-stretch text-[#E5E2E3] font-['Anton'] text-[32px] font-normal leading-[40px] tracking-[0.8px] uppercase"
+                    >
+                        ORGANIZATION
+                    </p>
+                    <div class="w-[58.09px] h-[2px] bg-[#E02020] my-2"></div>
+                    <div class="flex flex-col items-start self-stretch">
+                        <p
+                            class="text-[#e7bdb7] font-['Hanken_Grotesk'] text-[16px] font-normal leading-[24px]"
+                        >
+                            Search and select the combat organization to sync
+                            your fight history.
+                        </p>
+                    </div>
+                </div>
+                <div
                     class="flex pt-6 justify-between items-center self-stretch max-md:hidden"
                 >
                     <div class="flex items-center gap-2">
@@ -241,7 +264,37 @@
                         </div>
                     </div>
                 </div>
-                <!--여기다가 모바일 검색넣기-->
+                <div
+                    class="flex flex-col items-start self-stretch relative md:hidden"
+                >
+                    <div
+                        class="flex pt-[13px] pl-[10px] pb-[14px] items-start self-stretch border-b-[2px] border-b-[#353436] bg-[#2A2A2B]"
+                    >
+                        <input
+                            type="text"
+                            class="self-stretch font-['Hanken_Grotesk'] text-[16px] font-normal leading-normal text-[#B4B5B580] pl-7 w-full"
+                            placeholder="Search leagues..."
+                            id="mobile-organization-search"
+                        />
+                    </div>
+                    <div class="flex h-[50px] pl-3 items-center absolute">
+                        <div class="flex flex-col items-start">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                class="w-[18px] h-[18px] fill-[#454747]"
+                            >
+                                <path
+                                    d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.14583 12.3708 1.8875 11.1125C0.629167 9.85417 0 8.31667 0 6.5C0 4.68333 0.629167 3.14583 1.8875 1.8875C3.14583 0.629167 4.68333 0 6.5 0C8.31667 0 9.85417 0.629167 11.1125 1.8875C12.3708 3.14583 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18V18M6.5 11C7.75 11 8.8125 10.5625 9.6875 9.6875C10.5625 8.8125 11 7.75 11 6.5C11 5.25 10.5625 4.1875 9.6875 3.3125C8.8125 2.4375 7.75 2 6.5 2C5.25 2 4.1875 2.4375 3.3125 3.3125C2.4375 4.1875 2 5.25 2 6.5C2 7.75 2.4375 8.8125 3.3125 9.6875C4.1875 10.5625 5.25 11 6.5 11V11"
+                                    fill="#454747"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
                 <div
                     class="inline-grid gap-x-6 gap-y-6 self-stretch grid-cols-3 max-md:grid-cols-2 gap-6 w-full"
                 >
@@ -669,10 +722,10 @@
                         </div>
                     </div>
                     <div
-                        class="area-[1/1/2/2] flex py-[62.6px] px-6 flex-col justify-center items-center self-stretch rounded-xl border-1 border-dashed border-[#E5E2E3] bg-[#131314]"
+                        class="area-[1/1/2/2] flex md:py-[62.6px] max-md:py-[54px] px-6 flex-col justify-center items-center self-stretch rounded-xl border-1 border-dashed border-[#E5E2E3] bg-[#131314]"
                     >
                         <div
-                            class="flex w-16 h-20 pb-4 flex-col items-start max-md:pb-0"
+                            class="flex w-16 h-16 pb-4 flex-col items-start max-md:pb-0"
                         >
                             <div
                                 class="flex w-16 h-16 justify-center items-center shrink-0 rounded-full bg-[#2A2A2B]"

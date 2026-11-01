@@ -9,7 +9,7 @@ export function getOne(params) {
 
   let img = params.slice(imgdx, imgend);
 
-  // [추가] 선수 확인 모달에서 이름 보여주려고 name 추출 추가 (아래 return 의 name 도)
+  // 선수 확인 모달에서 이름 보여주려고 name 추출 추가
   let namedx = params.indexOf("<h1");
   namedx = params.indexOf(">", namedx) + 1;
   let name = params.slice(namedx, params.indexOf("</h1>", namedx)).trim();
@@ -22,7 +22,7 @@ export function getOne(params) {
   }
 
   return {
-    name: name, // [추가]
+    name: name,
     img: img,
     finishes: values[0],
     finishRate: values[1],

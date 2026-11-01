@@ -255,9 +255,11 @@
                             </svg>
 
                             <input
-                                type="text"
+                                type="search"
                                 name="organization"
                                 id="organization"
+                                autocomplete="off"
+                                data-org-search
                                 class="flex-1 bg-transparent border-none outline-none text-[#E7BDB7] text-[14px] placeholder-[#5d3f3c] font-['JetBrains_Mono']"
                                 placeholder="Find organization..."
                             />
@@ -271,10 +273,12 @@
                         class="flex pt-[13px] pl-[10px] pb-[14px] items-start self-stretch border-b-[2px] border-b-[#353436] bg-[#2A2A2B]"
                     >
                         <input
-                            type="text"
-                            class="self-stretch font-['Hanken_Grotesk'] text-[16px] font-normal leading-normal text-[#B4B5B580] pl-7 w-full"
+                            type="search"
+                            class="self-stretch font-['Hanken_Grotesk'] text-[16px] font-normal leading-normal text-[#E5E2E3] placeholder-[#B4B5B580] outline-none pl-7 w-full"
                             placeholder="Search leagues..."
                             id="mobile-organization-search"
+                            autocomplete="off"
+                            data-org-search
                         />
                     </div>
                     <div class="flex h-[50px] pl-3 items-center absolute">
@@ -296,11 +300,13 @@
                     </div>
                 </div>
                 <div
+                    id="org-grid"
                     class="inline-grid gap-x-6 gap-y-6 self-stretch grid-cols-3 max-md:grid-cols-2 gap-6 w-full"
                 >
                     <div
                         class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20] cursor-pointer transition-colors hover:border-[#FFB4AA]/40"
                         data-org="ufc"
+                        data-keywords="ufc ultimate fighting championship mma 유에프씨"
                     >
                         <div
                             class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
@@ -394,6 +400,7 @@
                     <div
                         class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20] cursor-pointer transition-colors hover:border-[#FFB4AA]/40"
                         data-org="one"
+                        data-keywords="one championship mma muay thai kickboxing 원챔피언십 원 챔피언십"
                     >
                         <div
                             class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
@@ -462,6 +469,7 @@
                     <div
                         class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20] cursor-pointer transition-colors hover:border-[#FFB4AA]/40"
                         data-org="boxrec"
+                        data-keywords="boxrec boxing 박스렉 복싱"
                     >
                         <div
                             class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
@@ -530,6 +538,7 @@
                     <div
                         class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20] cursor-pointer transition-colors hover:border-[#FFB4AA]/40"
                         data-org="blackcombat"
+                        data-keywords="black combat blackcombat mma 블랙컴뱃 블랙 컴뱃"
                     >
                         <div
                             class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
@@ -598,6 +607,7 @@
                     <div
                         class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20] cursor-pointer transition-colors hover:border-[#FFB4AA]/40"
                         data-org="rise"
+                        data-keywords="rise kickboxing 라이즈 킥복싱"
                     >
                         <div
                             class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
@@ -665,6 +675,7 @@
                     <div
                         class="area-[1/1/2/2] flex flex-col self-stretch rounded-xl border-2 border-solid border-[#5d3f3c]/20 bg-[#1F1F20] cursor-pointer transition-colors hover:border-[#FFB4AA]/40"
                         data-org="roadfc"
+                        data-keywords="road fc roadfc mma 로드fc 로드 fc"
                     >
                         <div
                             class="flex flex-1 flex-col rounded-xl bg-[#00000000] m-[26px]"
@@ -729,6 +740,23 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 검색 결과 없을 때 보여줄거 -->
+                    <div
+                        id="org-empty"
+                        class="col-span-full hidden flex-col items-center gap-2 py-12 rounded-xl border-1 border-solid border-[#5d3f3c]/20 bg-[#1F1F20]"
+                    >
+                        <p
+                            class="text-[#E5E2E3] font-['JetBrains_Mono'] text-sm font-semibold tracking-tight uppercase"
+                        >
+                            NO ORGANIZATION FOUND
+                        </p>
+                        <p
+                            class="text-[#E7BDB7] font-['Hanken_Grotesk'] text-base text-center"
+                        >
+                            "<span id="org-empty-query"></span>"로 검색한 결과가
+                            없습니다.
+                        </p>
+                    </div>
                     <div
                         class="area-[1/1/2/2] flex md:py-[62.6px] max-md:py-[54px] px-6 flex-col justify-center items-center self-stretch rounded-xl border-1 border-dashed border-[#E5E2E3] bg-[#131314]"
                     >
@@ -753,7 +781,7 @@
                             </div>
                         </div>
                         <p
-                            class="text-[#e5e2e3] text-center font-['JetBrains_Mono'] text-sm font-semibold leading-[16.8px] tracking-tight uppercase pb-2 max-md:hidden"
+                            class="text-[#e5e2e3] text-center font-['JetBrains_Mono'] text-sm font-semibold leading-[16.8px] tracking-tight uppercase pb-2 max-md:hidden mt-4"
                         >
                             CAN'T FIND YOUR ORG?
                         </p>
@@ -1168,6 +1196,54 @@
             document
                 .getElementById("fighter-confirm")
                 .addEventListener("click", closeModal);
+
+            // 1. 필요한 요소 잡기
+            const searchInputs = document.querySelectorAll("[data-org-search]");
+            const orgCards = document.querySelectorAll("#org-grid [data-org]");
+            const emptyBox = document.getElementById("org-empty");
+            const emptyQuery = document.getElementById("org-empty-query");
+
+            // 2. 검색어 받아서 카드 걸러내는 함수
+            function filterOrgs(keyword) {
+                const query = keyword.toLowerCase().trim();
+                let visibleCount = 0;
+
+                orgCards.forEach((card) => {
+                    const keywords = card.dataset.keywords; // data-keywords 속성값
+                    const match = keywords.includes(query);
+
+                    // TODO: match면 hidden 클래스 빼고 visibleCount++, 아니면 hidden 넣기
+                    if (match) {
+                        card.classList.remove("hidden");
+                        visibleCount++;
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+
+                if (!visibleCount && query) {
+                    emptyQuery.textContent = keyword;
+                    emptyBox.classList.remove("hidden");
+                    emptyBox.classList.add("flex");
+                } else {
+                    emptyBox.classList.add("hidden");
+                    emptyBox.classList.remove("flex");
+                }
+            }
+
+            // 이벤트리스너 매핑
+            searchInputs.forEach((input) => {
+                input.addEventListener("input", (event) => {
+                    const value = event.target.value;
+
+                    // 두 입력칸 값 맞춰주기 (화면 크기 바뀌어도 같은 결과 보이게)
+                    searchInputs.forEach((other) => {
+                        if (other !== input) other.value = value;
+                    });
+
+                    filterOrgs(value);
+                });
+            });
         </script>
     </body>
 </html>

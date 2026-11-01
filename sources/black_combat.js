@@ -9,7 +9,7 @@ export function getBlackCombat(params) {
 
   let img = params.slice(imgdx, imgend);
 
-  // [추가] 선수 확인 모달에서 이름 보여주려고 name 추출 추가 (아래 return 의 name 도)
+  // 선수 확인 모달에서 이름 보여주려고 name 추출 추가
   let namedx = params.indexOf(`class="data_name"`);
   namedx = params.indexOf("</span>", namedx) + 7;
   let name = params.slice(namedx, params.indexOf("<br", namedx)).trim();
@@ -24,7 +24,7 @@ export function getBlackCombat(params) {
   }
 
   return {
-    name: name, // [추가]
+    name: name,
     img: img,
     win: values[0],
     lose: values[1],

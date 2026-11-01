@@ -6,8 +6,7 @@ export function getRize(params) {
 
   let img = params.slice(imgdx, imgend);
 
-  // [추가] 선수 확인 모달에서 이름 보여주려고 name 추출 추가 (아래 return 의 name 도)
-  // 일본어 이름 + 영어 이름 같이 씀 -> "イ・ソンヒョン (Sunghyun Lee)"
+  // 선수 확인 모달에서 이름 보여주려고 name 추출 추가 + 영문이름같이
   // イ・ソンヒョン        <span>Sunghyun Lee</span>
   let namedx = params.indexOf("p-fighter__profile-name");
   namedx = params.indexOf(">", namedx) + 1;
@@ -24,7 +23,7 @@ export function getRize(params) {
   let ko = params.indexOf("KO", draw);
 
   return {
-    name: `${name} (${enName})`, // [추가]
+    name: `${name} (${enName})`,
     img: img,
     totalBouts: params.slice(start, bouts),
     win: params.slice(bouts + 1, win),

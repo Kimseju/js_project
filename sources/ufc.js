@@ -8,7 +8,7 @@ export function getUfc(params) {
 
   let img = params.slice(imgdx, imgend);
 
-  // [추가] 선수 확인 모달에서 이름 보여주려고 name 추출 추가 (아래 return 의 name 도)
+  // 선수 확인 모달에서 이름 보여주려고 name 추출 추가
   let namedx = params.indexOf(`hero-profile__name">`) + 20;
   let name = params.slice(namedx, params.indexOf("</h1>", namedx));
 
@@ -23,7 +23,7 @@ export function getUfc(params) {
   }
 
   return {
-    name: name, // [추가]
+    name: name, // 이거추가함
     img: img,
     w,
     l,

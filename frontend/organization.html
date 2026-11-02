@@ -1027,8 +1027,8 @@
             );
 
             let currentOrg = null;
-            // 조회 중에 모달 닫거나 다시 조회하면 이전 응답은 무시하려고 씀
             let requestId = 0;
+            let currentFighter = null;
 
             function openModal(card) {
                 // 읽기전용 속성 (data-org 속성 읽어오기)
@@ -1091,6 +1091,8 @@
 
             // 선수 맞는지 확인하는 함수인데 없으면 - 있으면 내용채우기
             function showFighter(fighter) {
+                currentFighter = fighter;
+
                 document.getElementById("fighter-name").textContent =
                     fighter.name;
                 document.getElementById("fighter-win").textContent =
@@ -1195,15 +1197,23 @@
             // 맞아요 -> 닫기
             document
                 .getElementById("fighter-confirm")
-                .addEventListener("click", closeModal);
+                .addEventListener("click", () => {
+                    const saved = {
+                        org: currentOrg, // "ufc"
+                        id: currentFighter.id,
+                        ...currentFighter, // name, img, win, lose, draw
+                    };
+                    console.log(saved);
+                    // localStorage.setItem("fighter", JSON.stringify(saved));
+                    // location.href = "./dashboard.html";
+                });
 
-            // 1. 필요한 요소 잡기
+            // 검색창, 카드, 검색창없을때알림창, 검색창없을때알림창에나오는메시지
             const searchInputs = document.querySelectorAll("[data-org-search]");
             const orgCards = document.querySelectorAll("#org-grid [data-org]");
             const emptyBox = document.getElementById("org-empty");
             const emptyQuery = document.getElementById("org-empty-query");
 
-            // 2. 검색어 받아서 카드 걸러내는 함수
             function filterOrgs(keyword) {
                 const query = keyword.toLowerCase().trim();
                 let visibleCount = 0;
@@ -1212,7 +1222,6 @@
                     const keywords = card.dataset.keywords; // data-keywords 속성값
                     const match = keywords.includes(query);
 
-                    // TODO: match면 hidden 클래스 빼고 visibleCount++, 아니면 hidden 넣기
                     if (match) {
                         card.classList.remove("hidden");
                         visibleCount++;
@@ -1236,7 +1245,7 @@
                 input.addEventListener("input", (event) => {
                     const value = event.target.value;
 
-                    // 두 입력칸 값 맞춰주기 (화면 크기 바뀌어도 같은 결과 보이게)
+                    // 모바일이랑 컴이랑 검색창 입력값 맞추기
                     searchInputs.forEach((other) => {
                         if (other !== input) other.value = value;
                     });

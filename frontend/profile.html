@@ -144,6 +144,42 @@
                 </a>
               </div>
             </li>
+
+            <li class="w-full list-none max-md:flex-1">
+              <div
+                class="rounded-lg flex w-full px-3 py-4 items-center gap-4 transition-colors max-md:flex-col max-md:justify-center max-md:gap-1 max-md:py-2"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 2H14L14.6 4.5C15.2 4.7 15.7 4.9 16.2 5.3L18.6 4.2L21.4 7L20.3 9.4C20.7 9.9 20.9 10.4 21.1 11L23.5 11.6V15.6L21.1 16.2C20.9 16.8 20.7 17.3 20.3 17.8L21.4 20.2L18.6 23L16.2 21.9C15.7 22.3 15.2 22.5 14.6 22.7L14 25H10L9.4 22.7C8.8 22.5 8.3 22.3 7.8 21.9L5.4 23L2.6 20.2L3.7 17.8C3.3 17.3 3.1 16.8 2.9 16.2L0.5 15.6V11.6L2.9 11C3.1 10.4 3.3 9.9 3.7 9.4L2.6 7L5.4 4.2L7.8 5.3C8.3 4.9 8.8 4.7 9.4 4.5L10 2Z"
+                    transform="translate(1.5 0) scale(0.875)"
+                    stroke="#E7BDB7"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3.5"
+                    stroke="#E7BDB7"
+                    stroke-width="1.8"
+                  />
+                </svg>
+
+                <a
+                  href="./setting.html"
+                  class="font-['Hanken_Grotesk'] font-semibold max-md:text-xs"
+                >
+                  SETTING
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div
@@ -167,14 +203,13 @@
               <p
                 class="font-mono text-xs text-[#E7BDB7] tracking-wider uppercase text-[11px]"
               >
-                BoxShot Athlete OS · Settings &amp; Bio Engine
+                BoxShot Athlete OS · Bio Engine
               </p>
               <h1 class="text-[30px] font-bold leading-tight my-1">
-                프로필 및 연동 설정
+                프로필 및 소개글 연동
               </h1>
               <p class="text-[#E7BDB7] text-sm max-md:hidden">
-                파이터 공식 프로필, 인스타그램 소개글 자동 연동, 계정 환경설정을
-                관리합니다.
+                파이터 공식 프로필과 인스타그램 소개글 자동 연동을 관리합니다.
               </p>
             </div>
             <div class="flex gap-2 max-md:hidden">
@@ -184,311 +219,219 @@
               >
                 Reset</button
               ><button
-                class="bg-[#E02020] text-white font-['Anton'] uppercase tracking-wide rounded-lg px-5 py-3 cursor-pointer hover:brightness-110 transition"
+                class="bg-[#F4B8B0] text-[#131314] font-['Anton'] uppercase tracking-wide rounded-lg px-5 py-3 cursor-pointer hover:brightness-110 transition"
                 onclick="save()"
               >
                 Save Changes
               </button>
             </div>
           </div>
-          <div
-            class="grid grid-cols-[1.4fr_1fr] gap-6 items-start max-xl:grid-cols-1"
-          >
-            <div class="flex flex-col gap-6">
-              <section
-                class="bg-[#1E1E1F] rounded-xl p-6 flex items-center gap-5 max-md:flex-wrap"
+          <div class="flex flex-col gap-6">
+            <section
+              class="bg-[#1E1E1F] border border-[#2A2A2B] rounded-xl p-6 flex items-center gap-5 max-md:flex-wrap"
+            >
+              <div
+                class="w-20 h-20 rounded-full border-2 border-[#FFB4AA] overflow-hidden shrink-0"
               >
-                <div
-                  class="w-20 h-20 rounded-full border-2 border-[#FFB4AA] overflow-hidden shrink-0"
+                <img
+                  src="https://kr.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VAN_JOSHUA_L_BELT_05-09.png?itok=emXQEdHo"
+                />
+              </div>
+              <div class="flex-1">
+                <span
+                  class="bg-[#F4B8B0] text-[#131314] font-mono text-[10px] px-2 py-0.5 rounded"
+                  >FIGHTER</span
                 >
-                  <img
-                    src="https://kr.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VAN_JOSHUA_L_BELT_05-09.png?itok=emXQEdHo"
-                  />
-                </div>
-                <div class="flex-1">
-                  <span
-                    class="bg-[#E02020] text-white font-mono text-[10px] px-2 py-0.5 rounded"
-                    >FIGHTER</span
-                  >
-                  <h2 class="text-[28px] font-medium leading-tight">
-                    김복서
-                    <span class="font-['Anton'] uppercase">(Kim Bok-Seo)</span>
-                  </h2>
-                  <p class="font-mono text-[11px] text-[#E7BDB7] mt-1.5">
-                    15-2-0 · 8 KO
-                  </p>
-                </div>
-              </section>
+                <h2 class="text-[28px] font-medium leading-tight">
+                  김복서
+                  <span class="font-['Anton'] uppercase">(Kim Bok-Seo)</span>
+                </h2>
+                <p class="font-mono text-[11px] text-[#E7BDB7] mt-1.5">
+                  15-2-0 · 8 KO
+                </p>
+              </div>
+            </section>
 
-              <section class="bg-[#1E1E1F] rounded-xl p-6">
-                <div class="flex items-start justify-between gap-3 mb-1">
-                  <h3 class="font-['Anton'] text-2xl uppercase tracking-wide">
-                    Instagram Bio Sync
-                  </h3>
-                  <span
-                    class="font-mono text-[11px] text-[#8fd5a6] whitespace-nowrap mt-2"
-                    >● LIVE SYNCED</span
+            <section
+              class="bg-[#1E1E1F] border border-[#2A2A2B] rounded-xl p-6"
+            >
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <h3 class="font-['Anton'] text-2xl uppercase tracking-wide">
+                  Instagram Bio Sync
+                </h3>
+              </div>
+              <div
+                class="bg-[#2A2A2B] rounded-lg p-4 flex items-center gap-4 mb-4"
+              >
+                <img
+                  class="w-10 h-10 shrink-0"
+                  src="https://i.ibb.co/MyKYZzDq/image.png"
+                  alt="인스타로고"
+                />
+                <div class="flex-1 min-w-0">
+                  <b class="block text-base font-medium truncate"
+                    >@kim_bokseo_official</b
+                  ><small class="font-mono text-[11px] text-[#E7BDB7]"
+                    >LAST SYNC 12 MIN AGO</small
                   >
                 </div>
-                <p class="text-[#E7BDB7] text-sm mb-5">
-                  프로필 소개글을 경기 일정 및 공식 데이터와 자동으로
-                  연동합니다.
-                </p>
-                <div
-                  class="bg-[#2A2A2B] rounded-lg p-4 flex items-center gap-4 mb-4"
-                >
-                  <div
-                    class="w-10 h-10 rounded-lg bg-gradient-to-tr from-[#f9a825] via-[#e1306c] to-[#833ab4] shrink-0"
-                  ></div>
-                  <div class="flex-1 min-w-0">
-                    <b class="block text-base font-medium truncate"
-                      >@kim_bokseo_official</b
-                    ><small class="font-mono text-[11px] text-[#E7BDB7]"
-                      >LAST SYNC 12 MIN AGO · TOKEN UNTIL 2027.12.31</small
-                    >
-                  </div>
-                </div>
-                <button
-                  class="bg-[#E02020] text-white font-['Anton'] uppercase tracking-wide rounded-lg px-5 py-3 cursor-pointer hover:brightness-110 transition w-full mb-6"
-                  onclick="sync(this)"
-                >
-                  ⟳ Sync Now
-                </button>
-                <div class="flex justify-between mb-2">
-                  <span
-                    class="font-mono text-xs text-[#E7BDB7] tracking-wider uppercase"
-                    >Live Preview</span
-                  ><span
-                    id="cnt"
-                    class="font-mono text-[11px] text-[#E7BDB7]"
-                  ></span>
-                </div>
-                <div
-                  id="pv"
-                  class="whitespace-pre-line bg-[#131314] border-l-4 border-l-[#E02020] rounded-r-lg p-4 text-sm leading-7 mb-6 min-h-[64px]"
-                ></div>
-                <p
-                  class="font-mono text-xs text-[#E7BDB7] tracking-wider uppercase mb-3"
-                >
-                  Bio Template
-                </p>
-                <textarea
-                  id="tpl"
-                  rows="5"
-                  spellcheck="false"
-                  class="w-full bg-[#131314] border border-[#4a4a4b] focus:border-[#E02020] outline-none rounded-lg p-4 text-sm leading-7 resize-y mb-3"
-                ></textarea>
-                <p class="text-[#E7BDB7] text-xs mb-2">
-                  원하는 문구를 자유롭게 쓰고, 자동으로 바뀌는 값은 아래 코드를
-                  눌러 삽입하세요.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <button
-                    type="button"
-                    data-t="%r"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%r</span
-                    >
-                    <span class="text-[#E7BDB7]">전적 15-2-0</span></button
-                  ><button
-                    type="button"
-                    data-t="%w"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%w</span
-                    >
-                    <span class="text-[#E7BDB7]">승</span></button
-                  ><button
-                    type="button"
-                    data-t="%l"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%l</span
-                    >
-                    <span class="text-[#E7BDB7]">패</span></button
-                  ><button
-                    type="button"
-                    data-t="%d"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%d</span
-                    >
-                    <span class="text-[#E7BDB7]">무</span></button
-                  ><button
-                    type="button"
-                    data-t="%k"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%k</span
-                    >
-                    <span class="text-[#E7BDB7]">KO 수</span></button
-                  ><button
-                    type="button"
-                    data-t="%n"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%n</span
-                    >
-                    <span class="text-[#E7BDB7]">다음 경기일</span></button
-                  ><button
-                    type="button"
-                    data-t="%o"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%o</span
-                    >
-                    <span class="text-[#E7BDB7]">상대</span></button
-                  ><button
-                    type="button"
-                    data-t="%c"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%c</span
-                    >
-                    <span class="text-[#E7BDB7]">D-Day</span></button
-                  ><button
-                    type="button"
-                    data-t="%u"
-                    class="chip bg-[#2A2A2B] hover:bg-[#E02020] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
-                  >
-                    <span class="font-mono text-[#E02020] hover:text-white"
-                      >%u</span
-                    >
-                    <span class="text-[#E7BDB7]">프로필 링크</span>
-                  </button>
-                </div>
+              </div>
+              <button
+                class="bg-[#F4B8B0] text-[#131314] font-['Anton'] uppercase tracking-wide rounded-lg px-5 py-3 cursor-pointer hover:brightness-110 transition w-full mb-6"
+                onclick="sync(this)"
+              >
+                ⟳ Sync Now
+              </button>
+              <div class="flex justify-between mb-2">
+                <span
+                  class="font-mono text-xs text-[#E7BDB7] tracking-wider uppercase"
+                  >Live Preview</span
+                ><span
+                  id="cnt"
+                  class="font-mono text-[11px] text-[#E7BDB7]"
+                ></span>
+              </div>
+              <div
+                id="pv"
+                class="whitespace-pre-line bg-[#131314] border-l-4 border-l-[#FFB4AA] rounded-r-lg p-4 text-sm leading-7 mb-6 min-h-[64px]"
+              ></div>
+              <p
+                class="font-mono text-xs text-[#E7BDB7] tracking-wider uppercase mb-3"
+              >
+                Bio Template
+              </p>
+              <textarea
+                id="tpl"
+                rows="5"
+                spellcheck="false"
+                class="w-full bg-[#131314] border border-[#4a4a4b] focus:border-[#FFB4AA] outline-none rounded-lg p-4 text-sm leading-7 resize-y mb-3"
+              ></textarea>
+              <p class="text-[#E7BDB7] text-xs mb-2">
+                원하는 문구를 자유롭게 쓰고, 자동으로 바뀌는 값은 아래 코드를
+                눌러 삽입하세요.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
                 <button
                   type="button"
-                  id="rst"
-                  class="text-xs text-[#E7BDB7] underline cursor-pointer"
-                >
-                  기본 템플릿으로 되돌리기
-                </button>
-              </section>
-            </div>
-
-            <div class="flex flex-col gap-6">
-              <section class="bg-[#1E1E1F] rounded-xl overflow-hidden">
-                <div class="bg-[#2A2A2B] px-6 py-5">
-                  <h3
-                    class="font-['Anton'] text-3xl uppercase text-[#E02020] leading-tight"
-                  >
-                    Licenses
-                  </h3>
-                  <p class="font-['Anton'] text-lg uppercase mt-1">
-                    3 Sanctioning Bodies
-                  </p>
-                </div>
-                <div class="p-5">
-                  <div
-                    class="border-l-4 border-l-[#E02020] bg-[#2A2A2B] rounded-r-lg px-4 py-3.5 mb-2.5 flex items-center justify-between gap-3"
-                  >
-                    <div>
-                      <h4
-                        class="font-['Anton'] text-lg uppercase tracking-wide leading-tight"
-                      >
-                        UFC Official Fighter
-                      </h4>
-                      <p class="font-mono text-[11px] text-[#E7BDB7] mt-1">
-                        #UFC-KR-2024-8891
-                      </p>
-                    </div>
-                    <span
-                      class="font-mono text-[11px] whitespace-nowrap text-[#8fd5a6]"
-                      >● VERIFIED</span
-                    >
-                  </div>
-                  <div
-                    class="border-l-4 border-l-[#E02020] bg-[#2A2A2B] rounded-r-lg px-4 py-3.5 mb-2.5 flex items-center justify-between gap-3"
-                  >
-                    <div>
-                      <h4
-                        class="font-['Anton'] text-lg uppercase tracking-wide leading-tight"
-                      >
-                        ONE Championship Pro
-                      </h4>
-                      <p class="font-mono text-[11px] text-[#E7BDB7] mt-1">
-                        #ONE-MMA-4412
-                      </p>
-                    </div>
-                    <span
-                      class="font-mono text-[11px] whitespace-nowrap text-[#8fd5a6]"
-                      >● VERIFIED</span
-                    >
-                  </div>
-                  <div
-                    class="border-l-4 border-l-[#E02020] bg-[#2A2A2B] rounded-r-lg px-4 py-3.5 mb-2.5 flex items-center justify-between gap-3"
-                  >
-                    <div>
-                      <h4
-                        class="font-['Anton'] text-lg uppercase tracking-wide leading-tight"
-                      >
-                        Road FC / Black Combat
-                      </h4>
-                      <p class="font-mono text-[11px] text-[#E7BDB7] mt-1">
-                        #RFC-PRO-9014
-                      </p>
-                    </div>
-                    <span
-                      class="font-mono text-[11px] whitespace-nowrap text-[#f5c26b]"
-                      >● RENEWING</span
-                    >
-                  </div>
-                  <button
-                    class="w-full mt-1 border border-dashed border-[#4a4a4b] text-[#E7BDB7] rounded-lg py-3 cursor-pointer hover:border-[#E02020] transition"
-                  >
-                    + 새 단체 라이선스 등록
-                  </button>
-                </div>
-              </section>
-
-              <section class="bg-[#1E1E1F] rounded-xl p-6">
-                <h3
-                  class="font-['Anton'] text-2xl uppercase tracking-wide mb-1"
-                >
-                  Account &amp; Security
-                </h3>
-                <p class="text-[#E7BDB7] text-sm mb-4">마스터 로그인 계정</p>
-                <div
-                  class="bg-[#2A2A2B] rounded-lg px-4 py-4 mb-2 flex items-center justify-between gap-3"
-                >
-                  <b class="font-medium truncate">fighter@boxshot.pro</b
-                  ><span
-                    class="font-mono text-[11px] text-[#8fd5a6] whitespace-nowrap"
-                    >● 2FA ON</span
-                  >
-                </div>
-                <button
-                  class="w-full bg-[#2A2A2B] rounded-lg px-4 py-4 mb-2 flex items-center justify-between cursor-pointer text-left"
+                  data-t="%r"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
                 >
                   <span
-                    >비밀번호 변경<small class="block text-[#E7BDB7] text-xs"
-                      >최종 변경 42일 전</small
-                    ></span
-                  ><span class="text-[#E7BDB7]">›</span>
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%r</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >전적</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%w"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%w</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >승</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%l"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%l</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >패</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%d"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%d</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >무</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%k"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%k</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >KO 수</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%n"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%n</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >다음 경기일</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%o"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%o</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >상대</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%c"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%c</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >D-Day</span
+                  ></button
+                ><button
+                  type="button"
+                  data-t="%u"
+                  class="chip group bg-[#2A2A2B] hover:bg-[#F4B8B0] transition rounded-lg px-3 py-1.5 text-xs cursor-pointer"
+                >
+                  <span
+                    class="font-mono text-[#FFB4AA] group-hover:text-[#131314]"
+                    >%u</span
+                  >
+                  <span class="text-[#E7BDB7] group-hover:text-[#131314]"
+                    >프로필 링크</span
+                  >
                 </button>
-                <div class="flex justify-between mt-4 text-sm">
-                  <button class="text-[#E7BDB7] cursor-pointer">
-                    로그아웃
-                  </button>
-                  <button class="text-[#ff8a80] cursor-pointer">
-                    계정 비활성화
-                  </button>
-                </div>
-              </section>
-            </div>
+              </div>
+              <button
+                type="button"
+                id="rst"
+                class="text-xs text-[#E7BDB7] underline cursor-pointer"
+              >
+                기본 템플릿으로 되돌리기
+              </button>
+            </section>
           </div>
           <button
-            class="bg-[#E02020] text-white font-['Anton'] uppercase tracking-wide rounded-lg px-5 py-3 cursor-pointer hover:brightness-110 transition w-full mt-6 hidden max-md:block"
+            class="bg-[#F4B8B0] text-[#131314] font-['Anton'] uppercase tracking-wide rounded-lg px-5 py-3 cursor-pointer hover:brightness-110 transition w-full mt-6 hidden max-md:block"
             onclick="save()"
           >
             Save Changes
@@ -498,7 +441,7 @@
     </div>
     <div
       id="toast"
-      class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-[#E02020] text-white px-[18px] py-2.5 rounded font-bold opacity-0 transition-opacity duration-300 pointer-events-none z-[60]"
+      class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-[#F4B8B0] text-[#131314] px-[18px] py-2.5 rounded font-bold opacity-0 transition-opacity duration-300 pointer-events-none z-[60]"
     ></div>
     <script>
       const $ = (id) => document.getElementById(id);
